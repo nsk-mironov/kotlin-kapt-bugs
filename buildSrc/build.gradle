@@ -1,0 +1,26 @@
+buildscript {
+  apply from: "../versions.gradle"
+
+  repositories {
+    jcenter()
+    google()
+  }
+
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+}
+
+repositories {
+  jcenter()
+  google()
+}
+
+apply plugin: 'kotlin'
+
+dependencies {
+  implementation gradleApi()
+  implementation "com.android.tools.build:gradle:$tools_version"
+  implementation "androidx.databinding:databinding-compiler:$tools_version"
+  implementation "io.michaelrocks:grip:$grip_version"
+}
