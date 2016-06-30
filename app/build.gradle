@@ -1,0 +1,38 @@
+apply plugin: "com.android.application"
+
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+
+android {
+  compileSdkVersion 28
+  buildToolsVersion "28.0.3"
+
+  defaultConfig {
+    applicationId "com.github.vmironov.ic"
+
+    minSdkVersion 16
+    targetSdkVersion 28
+
+    versionCode 1
+    versionName "1.0"
+  }
+
+  dexOptions {
+    javaMaxHeapSize "2g"
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+
+  dataBinding {
+    enabled true
+  }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  implementation "com.android.support:support-v13:$support_version"
+  implementation "com.android.support:appcompat-v7:$support_version"
+}
