@@ -1,38 +1,15 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-
-android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.3"
-
-  defaultConfig {
-    applicationId "com.github.vmironov.ic"
-
-    minSdkVersion 16
-    targetSdkVersion 23
-
-    versionCode 1
-    versionName "1.0"
-  }
-
-  dexOptions {
-    javaMaxHeapSize "4g"
-  }
-
-  lintOptions {
-    abortOnError false
-  }
-
-  dataBinding {
-    enabled true
+buildscript {
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
-kapt {
-  generateStubs = true
-}
+apply plugin: "kotlin"
+apply plugin: "application"
 
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  kapt "com.android.databinding:compiler:$tools_version"
+  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
+
+mainClassName = "com.github.vmironov.ic.MainKt"
