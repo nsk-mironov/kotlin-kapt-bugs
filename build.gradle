@@ -1,9 +1,11 @@
 buildscript {
-  ext.kotlin_version = '1.0.3'
-  ext.tools_version = '2.1.2'
+  ext.kotlin_version = '1.0.6-eap-60'
+  ext.tools_version = '2.2.2'
+  ext.support_version = '25.0.0'
 
   repositories {
     jcenter()
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap/' }
   }
 
   dependencies {
@@ -13,7 +15,15 @@ buildscript {
 }
 
 allprojects {
+  buildscript {
+    repositories {
+      jcenter()
+      maven { url 'https://dl.bintray.com/kotlin/kotlin-eap/' }
+    }
+  }
+
   repositories {
     jcenter()
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap/' }
   }
 }

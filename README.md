@@ -1,11 +1,15 @@
-Kotlin: Incremental compilation + kapt bugs
+Kotlin Kapt Bugs
 ===========================================
 
 Steps to reproduce:
 
-1. `$ git clone https://github.com/nsk-mironov/kotlin-ic-kapt-bugs`
-2. `$ cd kotlin-ic-kapt-bugs`
-3. `$ ./gradlew assembleDebug`
-4. Change something in EventQueue.kt
-5. `$ ./gradlew assembleDebug`
-6. Build fails with `Cannot access 'Event': it is 'internal' in 'ic'`
+- `$ git clone https://github.com/nsk-mironov/kotlin-kapt-bugs`
+- `$ cd kotlin-kapt-bugs`
+- `$ git checkout KT-14997`
+- `$ ./gradlew clean assembleDebug`
+- Everything compiles fine, but there is the following error in the log
+```
+error: cannot find symbol
+  symbol:   class CrashMe$notReally$1
+  location: package com.github.vmironov.ic
+```
