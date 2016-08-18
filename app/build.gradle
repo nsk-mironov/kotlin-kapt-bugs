@@ -2,37 +2,28 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.3"
+  compileSdkVersion 25
+  buildToolsVersion "25.0.2"
 
   defaultConfig {
     applicationId "com.github.vmironov.ic"
 
     minSdkVersion 16
-    targetSdkVersion 23
+    targetSdkVersion 25
 
     versionCode 1
     versionName "1.0"
   }
 
   dexOptions {
-    javaMaxHeapSize "4g"
+    javaMaxHeapSize "2g"
   }
 
   lintOptions {
     abortOnError false
   }
-
-  dataBinding {
-    enabled true
-  }
-}
-
-kapt {
-  generateStubs = true
 }
 
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  kapt "com.android.databinding:compiler:$tools_version"
 }
