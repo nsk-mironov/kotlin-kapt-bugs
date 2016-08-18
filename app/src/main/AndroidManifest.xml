@@ -6,12 +6,10 @@
     android:allowBackup="true"
     android:label="@string/app_name">
 
-    <activity
-      android:name="com.github.vmironov.ic.MainActivity"
-      android:label="@string/app_name">
+    <activity android:name=".CrashMeActivity">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
   </application>
