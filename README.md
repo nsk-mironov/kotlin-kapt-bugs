@@ -1,11 +1,12 @@
-Kotlin: Incremental compilation + kapt bugs
+Kotlin Kapt Bugs
 ===========================================
 
 Steps to reproduce:
 
-1. `$ git clone https://github.com/nsk-mironov/kotlin-ic-kapt-bugs`
-2. `$ cd kotlin-ic-kapt-bugs`
-3. `$ ./gradlew assembleDebug`
-4. Change something in EventQueue.kt
-5. `$ ./gradlew assembleDebug`
-6. Build fails with `Cannot access 'Event': it is 'internal' in 'ic'`
+- `$ git clone https://github.com/nsk-mironov/kotlin-kapt-bugs`
+- `$ cd kotlin-kapt-bugs`
+- `$ git checkout KT-14996`
+- `$ ./gradlew clean assembleDebug`
+```
+error: name clash: crashMe(List<? extends CharSequence>) and crashMe(List<String>) have the same erasure
+```
