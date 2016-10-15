@@ -5,7 +5,7 @@ Steps to reproduce:
 
 1. `$ git clone https://github.com/nsk-mironov/kotlin-kapt-bugs`
 2. `$ cd kotlin-kapt-bugs`
-3. `$ git checkout kapt2`
+3. `$ git checkout KT-14251`
 4. `$ ./gradlew clean assembleDebug`
 5. Build fails with
 ```
