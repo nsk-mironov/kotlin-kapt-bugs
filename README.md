@@ -5,11 +5,12 @@ Steps to reproduce:
 
 1. `$ git clone https://github.com/nsk-mironov/kotlin-kapt-bugs`
 2. `$ cd kotlin-kapt-bugs`
-3. `$ ./gradlew clean assembleDebug`
-4. Open `activity_main.xml`
-5. Add `android:text="123"` attribute
-6. `$ ./gradlew assembleDebug`
-7. Build fails with
+3. `$ git checkout KT-14250`
+4. `$ ./gradlew clean assembleDebug`
+5. Open `activity_main.xml`
+6. Add `android:text="123"` attribute
+7. `$ ./gradlew assembleDebug`
+8. Build fails with
 ```
 Execution failed for task ':app:compileDebugJavaWithJavac'.
 > java.lang.RuntimeException: Found data binding errors.
