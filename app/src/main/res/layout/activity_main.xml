@@ -1,6 +1,5 @@
 <layout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:binding="http://schemas.android.com/apk/res-auto">
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
   <data>
     <variable
@@ -10,7 +9,6 @@
 
   <TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    binding:font="@{`normal`}"/>
+    android:layout_height="match_parent"/>
 
 </layout>
