@@ -39,5 +39,5 @@ dependencies {
   compile "com.android.support:recyclerview-v7:$support_version"
   compile "com.android.support:design:$support_version"
 
-  kapt "com.google.dagger:dagger-compiler:2.8"
+  kapt "com.android.databinding:compiler:$tools_version"
 }
