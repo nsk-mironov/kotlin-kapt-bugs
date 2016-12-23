@@ -14,8 +14,6 @@ class MainActivity : Activity() {
     DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main).apply {
       model = MainViewModel()
     }
-
-    hello
   }
 }
 

@@ -7,7 +7,7 @@ Steps to reproduce:
 2. `$ cd kotlin-kapt-bugs`
 3. `$ git checkout KT-14308`
 4. Open the project in Android Studio
-5. Open `MainActivity.kt`
+5. Open `Hello.java`
 6. Wait for syntax highlighter to complete its job
 7. The moment after source code is fully highlighted, the IDE will freeze for a few seconds.
 
