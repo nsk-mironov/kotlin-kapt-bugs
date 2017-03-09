@@ -1,3 +1,5 @@
 package com.github.vmironov.ic
 
-class CrashMe
+interface CrashMe
+
+class CrashMeImpl : CrashMe
