@@ -1,22 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
 buildscript {
-  ext.kotlin_version = '1.0.5-eap-66'
-  ext.tools_version = '2.2.0'
-  ext.support_version = '24.2.1'
+  ext.kotlin_version = '1.2.30-eap-47'
 
   repositories {
-    jcenter()
-    maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
+    mavenCentral()
+    maven { url "https://dl.bintray.com/kotlin/kotlin-eap/" }
+    maven { url "https://dl.bintray.com/kotlin/kotlin-dev/" }
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:$tools_version"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
-allprojects {
-  repositories {
-    jcenter()
-    maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
-  }
+dependencies {
+  compile "io.reactivex.rxjava2:rxjava:2.1.9"
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+repositories {
+  mavenCentral()
+  maven { url "https://dl.bintray.com/kotlin/kotlin-eap/" }
+  maven { url "https://dl.bintray.com/kotlin/kotlin-dev/" }
 }
